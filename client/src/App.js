@@ -1,20 +1,15 @@
 import "./App.css";
 import { useEffect } from "react";
-import axios from "axios";
+import { getProducts } from "./reducers/products";
 
 function App() {
   useEffect(() => {
-    axios
-      .get("/api/products")
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log("error grabbing products");
-      });
+    getProducts();
   }, []);
 
-  return <div className="App"></div>;
+  return <div className="App">
+    <h1>Test</h1>
+  </div>;
 }
 
 export default App;
