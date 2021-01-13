@@ -3,7 +3,6 @@ import axios from "axios";
 export const getProducts = () => {
   //this is the thunk
   return (dispatch) => {
-    console.log('in axios');
     axios
       .get("/api/products")
       .then((res) => {
